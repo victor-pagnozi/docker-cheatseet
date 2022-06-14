@@ -1,15 +1,23 @@
-# Docker - Comandos Úteis
+# Docker - Useful Commands
 
 ## Containers
 
-- Abrir um shell em um container em execução:
-	- `docker exec -t -i <container_id> <shell>`
+- Open a shell in a container on:
+	- `docker exec -it <container_name> <shell>`
 
-## Limpeza
+## Cleaning
 
-- Excluir containers com status equivalente a Exited:
+- Delete containers if they are "Exited":
 	- `docker rm -v $(docker ps -a -q -f status=exited)`
-- Remover imagens não utilizadas do cache local:
+- Delete images not used of the local cache:
 	- `docker rmi $(docker images -f "dangling=true" -q)`
-- Limpar o diretório de volumes (vsf) do docker:
+- Clear the volumes directory of Docker:
 	- `docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes`
+- Remove exited containers, networks not used by at least one container, all dangling images and all dangling build cache
+	- `docker system prune`
+- Remove exited containers, networks not used by at least one container, all dangling images, all dangling build cache and volumes not used 
+	- `docker system prune --all --force --volumes`
+
+
+
+Link: https://www.macoratti.net/19/02/dock_limp1.htm
