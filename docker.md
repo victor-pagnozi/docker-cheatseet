@@ -21,18 +21,20 @@
 ## Scan
 
 - Install the Docker Scan Login
-	- sudo apt-get update && apt-get install docker-scan-plugin
+	- `sudo apt-get update && apt-get install docker-scan-plugin`
 - Login 
-	- docker login
+	- `docker login`
 - Scan the image
-	- docker scan
+	- `docker scan`
 - Get a detailed scan report
-	- docker scan --file PATH_TO_DOCKERFILE DOCKER_IMAGE (docker scan --file Dockerfile docker-scan:e2e)
+	- `docker scan --file PATH_TO_DOCKERFILE DOCKER_IMAGE (docker scan --file Dockerfile docker-scan:e2e)`
 
 ## Build and Up
 - Up Relay
-	- docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+	- `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
 - Build normal
-	- docker-compose build
+	- `docker-compose build`
+- Build and Up
+	- `docker-compose up --build`
 
 Link: https://www.macoratti.net/19/02/dock_limp1.htm
