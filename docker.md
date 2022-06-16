@@ -5,7 +5,7 @@
 - Open a shell in a container on:
 	- `docker exec -it <container_name> <shell>`
 
-## Cleaning
+## Stop and Clear
 
 - Delete containers if they are "Exited":
 	- `docker rm -v $(docker ps -a -q -f status=exited)`
@@ -17,6 +17,12 @@
 	- `docker system prune`
 - Remove exited containers, networks not used by at least one container, all dangling images, all dangling build cache and volumes not used 
 	- `docker system prune --all --force --volumes`
+- Stop all containers
+	- `docker stop $(docker ps -a -q)`
+- Remove all instances
+	- `docker rm $(docker ps -a -q)`
+- Stop All Volumes
+	- `docker volume prune`
 
 ## Scan
 
