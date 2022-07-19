@@ -51,4 +51,8 @@
 - Delete the logs on a Docker for Linux install
 	- `echo "" > $(docker inspect --format='{{.LogPath}}' <container_name_or_id>)`
 
+## Show Environment Variables
+- Show
+	- `docker exec -it <container_name> bash -c 'export'`
+
 Link: https://www.macoratti.net/19/02/dock_limp1.htm
