@@ -54,5 +54,7 @@
 ## Show Environment Variables
 - Show
 	- `docker exec -it <container_name> bash -c 'export'`
+- List Environment Variables
+	- `docker exec relay-backend printenv`
 
 Link: https://www.macoratti.net/19/02/dock_limp1.htm
