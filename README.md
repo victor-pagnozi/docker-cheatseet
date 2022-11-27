@@ -42,6 +42,8 @@
 	- `docker-compose build`
 - Build and Up
 	- `docker-compose up --build`
+- BUild and up a specific image
+	- `docker-compose up -d --no-deps --build <service_name>`
 
 ## Logs
 - Show the more recent logs lines
