@@ -1,0 +1,6 @@
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+sudo docker compose up -d --no-deps --build backend
+docker restart relay-backend
+docker-compose build relay-backend
+docker-compose build backend
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
