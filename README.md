@@ -38,6 +38,7 @@
 ## Build and Up
 - Up Relay
 	- `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
+	- `docker-compose -f docker-compose.yml -f docker-compose.dev.yml -f docker-compose.dev.stream.yml up -d`
 - Build normal
 	- `docker-compose build`
 - Build and Up
