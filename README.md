@@ -60,4 +60,8 @@
 - List Environment Variables
 	- `docker exec relay-backend printenv`
 
+## Others
+- Redis
+	- `docker exec -it redis /bin/ash`
+
 Link: https://www.macoratti.net/19/02/dock_limp1.htm
